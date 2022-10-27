@@ -13,30 +13,54 @@
         button{
             background-color: greenyellow;
             cursor: pointer;
+            margin: 0;
+            border-radius: 10px;
+            padding: 6px;
         }
         
         .reset{
             background-color: greenyellow;
             cursor: pointer;
+            margin: 0;
+            border-radius: 10px;
+            padding: 6px;
+        }
+
+        input{
+            margin: 0;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        div{
+            margin: 0;
+            border: black;
+            border-radius: 10px;
+            border-style: dashed;
+            padding-bottom: 20px;
+            padding-left: 0;
+            width: 100ch;
         }
     </style>
 </head>
 <body>
-    <center><h1>Welcome to Empire Hotel</h1>
+    <center>
+    <div>
+        <center><h1>Welcome to Empire Hotel</h1>
 
-        <a href="signin.html"><button >Sign-in</button></a>
-        <a href="login.html"><button >Login</button></a>
+            <a href="signin.html"><button >Sign-in</button></a>
+            <a href="login.html"><button >Login</button></a>
 
-    </center><br><hr><br>
+        </center>
+    </div></center><br><br>
     <center><form>
         Enter your name:
-        <input type="text"><br><br><br>
+        <input type="text" placeholder="name"><br><br><br>
 
         Entet your address:
-        <textarea></textarea><br><br><br>
+        <textarea placeholder="address"></textarea><br><br><br>
 
         Enter your phone number:
-        <input type="text"><br><br><br>
+        <input type="text" placeholder="7892105626"><br><br><br>
 
         Which type of rooms do you prefer:
         <input type="checkbox">Basic rooms
@@ -68,8 +92,8 @@
         </select><br><br><br>
 
         Do you agree our terms & condition: 
-        <input type="radio">Yes
-        <input type="radio">NO <br><br>
+        <input type="radio" name="yes">Yes
+        <input type="radio" name="yes">No <br><br>
 
         <button>Submit</button>
         <input type="reset" class="reset">
