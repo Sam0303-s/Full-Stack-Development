@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Hotel Booking</title>
     <style>
+        *{
+            font-style: italic;
+        }
         body{
-            background-color: rgb(211, 188, 188);
+            /*background-color: rgb(255, 177, 210);*/
+            background-image: url('pink.jpg');
             font-size: 18px;
             font-weight: bolder;
             color: black;
@@ -15,7 +19,7 @@
         }
 
         button{
-            background-color: greenyellow;
+            background-color: rgb(252, 47, 132);
             cursor: pointer;
             margin: 0;
             border-radius: 10px;
@@ -23,85 +27,126 @@
         }
         
         .reset{
-            background-color: greenyellow;
+            background-color: rgb(248, 195, 217);
             cursor: pointer;
             margin: 0;
             border-radius: 10px;
             padding: 6px;
         }
 
-        input{
-            margin: 0;
+        .reset:hover{
+            border-style: groove;
+        }
+
+        .button:hover{
+            border-style: groove;
+        }
+
+        input,textarea{
+            font-size: 15px;
+            margin: 10px;
             padding: 6px;
             border-radius: 10px;
+            border: rgb(255, 47, 134);
+            border-style: inset;
+            background-color: rgb(248, 195, 217);
         }
         div{
-            margin: 0;
-            border: black;
+            background-color: rgb(253, 144, 189);
+            border: rgb(255, 47, 134);
             border-radius: 10px;
-            border-style: dashed;
+            border-style: solid;
             padding-bottom: 20px;
             padding-left: 0;
             width: 100ch;
         }
+        .main_form{
+            background-color: rgb(253, 144, 189);
+            border: rgb(255, 47, 134);
+            border-radius: 10px;
+            border-style: solid;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            width: 100ch;
+            margin-left: 330px;
+        }
+
+        input[type=checkbox],input[type=radio],input[type=button]{
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        label{
+            font-size: larger;
+        }
+        
     </style>
+        
+    <script>
+        function res()
+{
+            var rooms = rooms.one.value;
+            
+}    </script>
 </head>
 <body>
     <center>
     <div>
         <center><h1>Welcome to Empire Hotel</h1>
 
-            <a href="signin.html"><button >Sign-in</button></a>
-            <a href="login.html"><button >Login</button></a>
+            <a href="signin.html"><input type="button" value="Sign-in" class="button"></a>
+            <a href="login.html"><input type="button" value="Login" class="button"></button></a>
 
         </center>
     </div></center><br><br>
+    <div class="main_form">
     <center><form>
-        Enter your name:
-        <input type="text" placeholder="name"><br><br><br>
+        <label for="name">Enter your name:</label>
+        <input type="text" placeholder="name" id="name"><br><br><br>
 
-        Entet your address:
-        <textarea placeholder="address"></textarea><br><br><br>
+        <label for="address">Entet your address:</label>
+        <textarea placeholder="address" id="address"></textarea><br><br><br>
 
-        Enter your phone number:
-        <input type="text" placeholder="7892105626"><br><br><br>
+        <label for="phone">Enter your phone number:</label>
+        <input type="text" placeholder="7892105626" id="phone"><br><br><br>
 
-        Which type of rooms do you prefer:
-        <input type="checkbox">Basic rooms
-        <input type="checkbox">Premier rooms
+        <label for="rooms">Which type of rooms do you prefer:</label>
+        <input type="checkbox" id="b_rooms"><label for="b_rooms">Basic rooms</label>
+        <input type="checkbox" id="p_rooms"><label for="p_rooms">Premier rooms</label>
         <br><br><br>
         
-        Each rooms costs $1200 per day <br><br><br>
-        No of rooms required:
-        <select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+        <label for="info">Each rooms costs $1200 per day</label><br><br><br>
+        <label for="no_romms">No of rooms required:</label> 
+        <select name="rooms">
+            <option value="1" selected name="one">1</option>
+            <option value="2" name="two">2</option>
+            <option value="3" name="three">3</option>
+            <option value="4" name="four">4</option>
+            <option value="5" name="five">5</option>
         </select><br><br><br>
 
-        At what time u r gonna check-in:
+        <label for="time">At what time u r gonna check-in:</label>
         <input type="time"><br><br><br>
 
-        What type of food you prefer:
-        <input type="checkbox">Veg
-        <input type="checkbox">Non-Veg <br><br><br>
+        <label for="food">What type of food you prefer:</label>
+        <input type="checkbox" id="veg"><label for="veg">Veg</label>
+        <input type="checkbox" id="n_veg"><label for="n_veg">Non-Veg</label> <br><br><br>
 
-        Payment methods:
-        <select >
-            <option>UPI</option>
-            <option>credit card</option>
-            <option>debit card</option>
+        <label for="payment">Payment methods:</label>
+        <select id="payment">
+            <option value="UPI">UPI</option>
+            <option value="credit card">credit card</option>
+            <option value="debit card">debit card</option>
         </select><br><br><br>
 
-        Do you agree our terms & condition: 
-        <input type="radio" name="yes">Yes
-        <input type="radio" name="yes">No <br><br>
+        <label for="agrement">Do you agree our terms & condition:</label> 
+        <input type="radio" name="yes" id="yes"><label for="yes">Yes</label>
+        <input type="radio" name="yes" id="no"><label for="no">No</label> <br><br>
 
-        <button>Submit</button>
+        <input type="button" value="Submit" class="button">
         <input type="reset" class="reset">
+        <p id="ackwnoledgement"></p>
 
-    </form></center>
+    </form></center></div>
 </body>
 </html>
