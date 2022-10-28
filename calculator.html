@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Task</title>
+    <script>
+        /*function add(){
+            let a = parseInt(document.getElementsByName('num')[0].value);
+            let b = parseInt(document.getElementsByName('num')[1].value);
+            document.getElementById("add_res").innerHTML = a+b;
+        }*/
+
+        /*function add(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById("add_res").innerHTML = a+b;
+        }*/
+
+        /*function add(){
+            let a = parseInt(document.getElementsByTagName('input')[0].value);
+            let b = parseInt(document.getElementsByTagName('input')[1].value);
+            document.getElementById("add_res").innerHTML = a+b;
+        }*/
+
+        /*function add(){
+            let a = parseInt(document.getElementsByClassName('num')[0].value);
+            let b = parseInt(document.getElementsByClassName('num')[1].value);
+            document.getElementById("add_res").innerHTML = a+b;
+        }*/
+        
+        function add(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById('add_res').innerHTML = a+b;
+        }
+        function sub(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById("sub_res").innerHTML = a-b;
+        }
+
+        function mul(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById("mul_res").innerHTML = a*b;
+        }
+
+        function div(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById("div_res").innerHTML = a/b;
+        }
+
+        function mod(){
+            let a = parseInt(sam.num1.value);
+            let b = parseInt(sam.num2.value);
+            document.getElementById("mod_res").innerHTML = a%b;
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="sam">
+        <label for="name">Enter first number:  </label>
+        <input type="text" placeholder="first_number" id="name" name="num1" required><br><br>
+
+        <label for="age">Enter second number: </label>
+        <input type="text" placeholder="second_number" id="age" name="num2" required><br><br>
+
+        <button type="button" onclick="add()">ADDITION</button><div id="add_res"></div><br><br>
+        <button type="button" onclick="sub()">SUBTRACTION</button><div id="sub_res"></div><br><br>
+        <button type="button" onclick="mul()">MULTIPLICATION</button><div id="mul_res"></div><br><br>
+        <button type="button" onclick="div()">DIVISION</button><div id="div_res"></div><br><br>
+        <button type="button" onclick="mod()">MODULUS</button><div id="mod_res"></div><br><br>
+    </form>
+</body>
+</html>
