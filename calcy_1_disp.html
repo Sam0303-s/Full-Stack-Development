@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            background-color: whitesmoke;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link rel="icon" href="cal.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcy_display</title>
+    <script>
+
+        function one_disp(){
+            //var num_disp = document.getElementsByName('btn')[0].value;
+            var one = document.getElementById('res').value = document.getElementsByName('btn')[0].value;
+            globalThis.one1 = one
+        }
+
+        function two_disp(){
+            //var alpha_disp = document.getElementsByName('btn')[1].value;
+            var two = document.getElementById('res').value = document.getElementsByName('btn')[1].value;
+            globalThis.two2 = two
+        }
+
+        function three_disp(){
+            //var sym_disp = document.getElementsByName('btn')[2].value;
+            var three = document.getElementById('res').value = document.getElementsByName('btn')[2].value;
+            globalThis.three3 = three
+        }
+
+        function add(){
+            var plus = document.getElementById('res').value = document.getElementsByName('btn')[3].value;
+            globalThis.plus_ = plus
+        }
+
+        function four_disp(){
+            var four = document.getElementById('res').value = document.getElementsByName('btn')[4].value;
+            globalThis.four4 = four
+        }
+
+        function five_disp(){
+            var five = document.getElementById('res').value = document.getElementsByName('btn')[5].value;
+            globalThis.five5 = five
+        }
+
+        function six_disp(){
+            var six = document.getElementById('res').value = document.getElementsByName('btn')[6].value;
+            globalThis.six6 = six
+        }
+
+        function sub(){
+            var minus = document.getElementById('res').value = document.getElementsByName('btn')[7].value;
+            globalThis.minus_ = minus
+        }
+
+        function seven_disp(){
+            var seven = document.getElementById('res').value = document.getElementsByName('btn')[8].value;
+            globalThis.seven7 = seven
+        }
+
+        function eight_disp(){
+            var eight = document.getElementById('res').value = document.getElementsByName('btn')[9].value;
+            globalThis.eight8 = eight
+        }
+
+        function nine_disp(){
+            var nine = document.getElementById('res').value = document.getElementsByName('btn')[10].value;
+            globalThis.nine9 = nine
+        }
+
+        function mul(){
+            var star = document.getElementById('res').value = document.getElementsByName('btn')[11].value;
+            globalThis.star_ = star
+        }
+
+        var global_a = one1,two2;
+        var global_b = one1,two2;
+
+        // function cal(){
+        //     let sum = "+";
+        //     let sub = "-";
+        //     let mul = "*";
+              
+            
+        // }
+    </script>
+</head>
+<body>
+    <center>
+        <div class="screen">
+            <form action="#">
+                
+                <input type="text" id="res" name="screen_view" style="text-align: center;"><br><br>
+
+                <input type="button" value="1" name="btn" onclick="one_disp()">&nbsp;
+                <input type="button" value="2" name="btn" onclick="two_disp()">&nbsp;
+                <input type="button" value="3" name="btn" onclick="three_disp()">&nbsp;
+                <input type="button" value="+" name="btn" onclick="add()"><br><br>
+
+
+                <input type="button" value="4" name="btn" onclick="four_disp()">&nbsp;
+                <input type="button" value="5" name="btn" onclick="five_disp()">&nbsp;
+                <input type="button" value="6" name="btn" onclick="six_disp()">&nbsp;
+                <input type="button" value="-" name="btn" onclick="sub()"><br><br>
+
+
+                <input type="button" value="7" name="btn" onclick="seven_disp()">&nbsp;
+                <input type="button" value="8" name="btn" onclick="eight_disp()">&nbsp;
+                <input type="button" value="9" name="btn" onclick="nine_disp()">&nbsp; 
+                <input type="button" value="*" name="btn" onclick="mul()"><br><br>  
+
+
+                <input type="button" name="btn" value="=" onclick="cal()">
+            </form>
+        </div>
+</center>
+</body>
+</html>
