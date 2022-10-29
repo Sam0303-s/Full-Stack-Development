@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="empire_icon.jpeg">
     <title>Login to Empire</title>
 </head>
 <body>
+
+    <script>
+        var email = "samuelsrujanb@gmail.com";
+        var phone = "7892105626"
+        var pass = "sam"
+
+        function res(){
+            let a_email_or_phone = document.getElementsByName('sam')[0].value;
+            let a_password = document.getElementsByName('sam')[1].value;
+
+            if ((email == a_email_or_phone || phone == a_email_or_phone) && (pass == a_password)){
+                //document.getElementById('main_res').innerHTML = "Successfully Logged-in";
+                window.location.href = "HotelBooking.html";
+            }
+            else{
+                document.getElementById('main_res').innerHTML = "email or password entered is invaild";
+            }
+        }
+    </script>
     <style>
         body{
+            background-image: url('pink.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
             font-size: 18px;
             font-weight: bolder;
             color: black;
-            background: rgb(194, 181, 181);
         }
         div {
-            background-color: rgb(218, 186, 186);
+            background-color: rgb(253, 144, 189);
             padding: 40px;
-            border-color: black;
-            border-width: 2px;
-            border-style: dashed;
+            border-color: rgb(255, 47, 134);
+            border-width: 5px;
+            border-style: solid;
             border-radius: 70px;
             width: 1000px;
         }
@@ -25,12 +49,12 @@
             font-style: italic;
         }
         a{
-            background-color: greenyellow;
+            background-color: rgb(248, 195, 217);
             color: black;
             padding: 2px;
-            border-color: black;  
-            border-width: 1px;  
-            border-style: inset;
+            border-color: rgb(255, 47, 134);  
+            border-width: 3px;  
+            border-style: groove;
             text-decoration: none;
             margin: 0;
             padding: 10px;
@@ -38,29 +62,47 @@
         }
         
         .pointer{
-            background-color: greenyellow;
+            background-color: rgb(248, 195, 217);
             cursor: pointer;
+            border-color: rgb(255, 47, 134);  
+            border-width: 3px;
             margin: 0;
             padding: 10px;
             border-radius: 15px;
         }
 
         input{
-            margin: 0;
+            background-color: rgb(248, 195, 217);
+            margin-top: 5px;
+            margin-bottom: 0;
             padding: 10px;
             border-radius: 15px;
+            border-color: rgb(255, 47, 134);  
+            border-width: 3px;
+            color: black;
         }
 
         .div_head{
             margin: 0;
             border: black;
             border-radius: 10px;
-            border-style: dashed;
+            border-style: double;
             padding-bottom: 20px;
+            padding-top: 100px;
             padding-left: 0;
             width: 100ch;
         }
+        
 
+        label{
+            font-size: larger;
+            padding: 10px;
+        }  
+
+        .pointer:hover{
+            border-style: groove;
+            font-weight: bold;
+        }
     </style>
 
     <center>
@@ -75,20 +117,22 @@
         <center>
         <div>
         <form>
-            Enter email or phone-no: <br>
-            <input type="text" placeholder="abc@gmail.com"><br><br>
+            <label for="email_phone">Enter email or phone-no:</label> <br>
+            <input type="text" placeholder="abc@gmail.com" required name="sam"><br><br>
 
-            Enter your password: <br>
-            <input type="password" placeholder="password"> <br><br>
+            <label for="password">Enter your password:</label> <br>
+            <input type="password" placeholder="password" required name="sam"></p>
 
-            Do you want to stay logged-in: 
-            <input type="radio" name="sam">Yes
-            <input type="radio" name="sam">No <br><br>
+            <label for="choice">Do you want to stay logged-in:</label> 
+            <input type="radio" name="yes" id="yes"><label for="yes">Yes</label>
+            <input type="radio" name="yes" id="no"><label for="no">No</label> <br><br><br>
 
-            <a href="/signin.html">Do not have an account</a><br><br>
+            <a href="/signin.html" target="blank" class="choice">Do not have an account</a><br><br><br>
 
-            <button class="pointer">Submit</button>
-        <input type="reset" class="pointer">
+            <button class="pointer" onclick="res()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" class="pointer"><br><br>
+            <p id="main_res"></p>
+            
         </form>
     </div>
 </center>

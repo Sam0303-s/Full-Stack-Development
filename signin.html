@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="empire_icon.jpeg">
     <title>Sign-in to Empire</title>
     <style>
         body{
+            background-image: url('pink.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
             font-size: 18px;
             font-weight: bolder;
             color: black;
-            background: rgb(184, 173, 173);
         }
+
         div {
             background-color: rgb(214, 141, 52);
             padding: 40px;
@@ -80,7 +86,8 @@
             <option>+ aus</option>
             <option>+ us</option>
             <option>+ uk</option>
-        </select><input type="text"><br><br>
+        </select>
+        <input type="text" pattern="[0-9]{10}"><br><br>
 
         Enter your email: <br>
         <input type="email"> <br><br>
