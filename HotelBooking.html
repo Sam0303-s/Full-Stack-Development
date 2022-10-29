@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="empire_icon.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Booking</title>
     <style>
         *{
@@ -9,6 +11,10 @@
         body{
             /*background-color: rgb(255, 177, 210);*/
             background-image: url('pink.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
             font-size: 18px;
             font-weight: bolder;
             color: black;
@@ -55,6 +61,7 @@
             background-color: rgb(253, 144, 189);
             border: rgb(255, 47, 134);
             border-radius: 10px;
+            
             border-style: solid;
             padding-bottom: 20px;
             padding-left: 0;
@@ -78,8 +85,8 @@
         
         label{
             font-size: larger;
-        }
-        
+            margin-bottom: 200px;
+        }        
     </style>
 </head>
 <body>
@@ -109,7 +116,7 @@
         <br><br><br>
         
         <label for="info">Each rooms costs $1200 per day</label><br><br><br>
-        <label for="no_romms">No of rooms required:</label> 
+        <label for="no_romms">No of rooms required:</label>
         <select>
             <option value="1" selected>1</option>
             <option value="2">2</option>
