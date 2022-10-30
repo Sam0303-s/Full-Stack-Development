@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" href="empire_icon.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking</title>
+    <title>Hotel Booking - Empire</title>
     <style>
         *{
             font-style: italic;
@@ -61,14 +61,15 @@
             background-color: rgb(253, 144, 189);
             border: rgb(255, 47, 134);
             border-radius: 10px;
-            
+            box-shadow: 10px,10px, whitesmoke;
             border-style: solid;
             padding-bottom: 20px;
             padding-left: 0;
             width: 100ch;
         }
-        .main_form{
+        #main_form{
             background-color: rgb(253, 144, 189);
+            box-shadow: 100px;
             border: rgb(255, 47, 134);
             border-radius: 10px;
             border-style: solid;
@@ -86,7 +87,18 @@
         label{
             font-size: larger;
             margin-bottom: 200px;
-        }        
+        }
+        
+        select{
+            background-color: rgb(248, 195, 217);
+            font-size: 15px;
+            margin: 10px;
+            margin-right: 0%;
+            padding: 5px;
+            border-radius: 10px;
+            border: rgb(255, 47, 134);
+            border-style: inset;
+        }
     </style>
 </head>
 <body>
@@ -99,12 +111,12 @@
 
         </center>
     </div></center><br><br>
-    <div class="main_form">
+    <div id="main_form">
     <center><form>
         <label for="name">Enter your name:</label>
         <input type="text" placeholder="name" id="name"><br><br><br>
 
-        <label for="address">Entet your address:</label>
+        <label for="address">Enter your address:</label>
         <textarea placeholder="address" id="address"></textarea><br><br><br>
 
         <label for="phone">Enter your phone number:</label>
@@ -125,6 +137,12 @@
             <option value="5">5</option>
         </select><br><br><br>
 
+        <label for="B_date">Boarding Date:</label>
+        <input type="date" id="B_date"><br><br>
+
+        <label for="V_date">Vacating Date:</label>
+        <input type="date" id="V_date"><br><br>
+
         <label for="time">At what time u r gonna check-in:</label>
         <input type="time"><br><br><br>
 
@@ -134,7 +152,7 @@
 
         <label for="payment">Payment methods:</label>
         <select id="payment">
-            <option value="UPI">UPI</option>
+            <option value="UPI" selected>UPI</option>
             <option value="credit card">credit card</option>
             <option value="debit card">debit card</option>
         </select><br><br><br>
