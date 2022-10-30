@@ -5,25 +5,6 @@
     <title>Login to Empire</title>
 </head>
 <body>
-
-    <script>
-        var email = "samuelsrujanb@gmail.com";
-        var phone = "7892105626"
-        var pass = "sam"
-
-        function res(){
-            let a_email_or_phone = document.getElementsByName('sam')[0].value;
-            let a_password = document.getElementsByName('sam')[1].value;
-
-            if ((email == a_email_or_phone || phone == a_email_or_phone) && (pass == a_password)){
-                //document.getElementById('main_res').innerHTML = "Successfully Logged-in";
-                window.location.href = "HotelBooking.html";
-            }
-            else{
-                document.getElementById('main_res').innerHTML = "email or password entered is invaild";
-            }
-        }
-    </script>
     <style>
         body{
             background-image: url('pink.jpg');
@@ -39,6 +20,7 @@
             background-color: rgb(253, 144, 189);
             padding: 40px;
             border-color: rgb(255, 47, 134);
+            box-shadow: 10px,black;
             border-width: 5px;
             border-style: solid;
             border-radius: 70px;
@@ -105,12 +87,29 @@
         }
     </style>
 
-    <center>
-        <div>
+    <script>
+        var email = "samuelsrujanb@gmail.com";
+        var pass = "sam"
+
+        function res(){
+            let a_email = document.getElementsByName('sam')[0].value;
+            let a_password = document.getElementsByName('sam')[1].value;
+
+            if (a_email == email && a_password == pass){
+                alert("Successfully Logged-in");
+                window.location.href="HotelBooking.html";
+            }
+            else{
+                alert("email or password entered is invaild");
+            }
+        }
+    </script>
 
     <center>
+        <div>
+    <center>
         <h1>Login page to Empire</h1>
-        <a href="/HotelBooking.html">Home</a>
+        <a href="/HotelBooking.html" target="_blank">Home</a>
         </div>
     </center>
     <br><br>
@@ -125,14 +124,12 @@
 
             <label for="choice">Do you want to stay logged-in:</label> 
             <input type="radio" name="yes" id="yes"><label for="yes">Yes</label>
-            <input type="radio" name="yes" id="no"><label for="no">No</label> <br><br><br>
+            <input type="radio" name="yes" id="no"><label for="no">No</label><br><br><br>
 
             <a href="/signin.html" target="blank" class="choice">Do not have an account</a><br><br><br>
 
-            <button class="pointer" onclick="res()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="pointer" type="submit" onclick="res()" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="reset" class="pointer"><br><br>
-            <p id="main_res"></p>
-            
         </form>
     </div>
 </center>
