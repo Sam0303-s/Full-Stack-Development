@@ -23,16 +23,16 @@
         }
 
         a{
-            background-color: greenyellow;
+            font-size: 15px;
             color: black;
-            padding: 2px;
-            border-color: black;  
-            border-width: 1px;  
-            border-style: inset;
-            text-decoration: none;
-            margin: 0;
+            margin: 10px;
             padding: 10px;
+            font-weight: bold;
             border-radius: 15px;
+            border: rgb(255, 47, 134);
+            text-decoration: none;
+            border-style: inset;
+            background-color: rgb(248, 195, 217);
         }
 
         h1{
@@ -40,70 +40,124 @@
         }
 
         .pointer{
-            background-color: greenyellow;
+            font-size: 15px;
+            margin: 10px;
+            padding: 6px;
+            font-weight: bold;
             cursor: pointer;
-            margin: 0;
-            padding: 10px;
             border-radius: 15px;
+            border: rgb(255, 47, 134);
+            border-style: inset;
+            background-color: rgb(248, 195, 217);
         }
 
         div{
-            background: none;
-            margin: 0;
-            border: black;
+            background-color: rgb(253, 144, 189);
+            border: rgb(255, 47, 134);
+            margin-left: 40px;
             border-radius: 10px;
-            border-style: dashed;
+            box-shadow: 10px,10px, whitesmoke;
+            border-style: solid;
             padding-bottom: 20px;
             padding-left: 0;
             width: 100ch;
+        }
+
+        .main-form{
+            background-color: rgb(253, 144, 189);
+                box-shadow: 100px;
+                border: rgb(255, 47, 134);
+                border-radius: 10px;
+                border-style: solid;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                width: 100ch;
+                margin-left: 330px;
+        }
+
+        input,textarea{
+            font-size: 15px;
+            margin: 10px;
+            padding: 6px;
+            border-radius: 10px;
+            border: rgb(255, 47, 134);
+            border-style: inset;
+            background-color: rgb(248, 195, 217);
+        }
+
+        select{
+            background-color: rgb(248, 195, 217);
+            font-size: 15px;
+            margin: 10px;
+            margin-right: 0%;
+            padding: 6px;
+            border-radius: 10px;
+            border: rgb(255, 47, 134);
+            border-style: inset;
         }
     </style>
 </head>
 <body>
     <center>
-        <div>
-
-        
-    <center>
-    <h1>Sign-in to Empire</h1>
-    <a href="/HotelBooking.html">Home</a><br><br>
+    <div>
+        <center>
+        <h1>Sign-in to Empire</h1>
+        <a href="/HotelBooking.html">Home</a><br><br>
     </div>
     </center>
     <br>
     </center>
-
+    <div class="main-form">
         <center>
-            <form>
-                Enter your name: <br>
-        <input type="text"><br><br>
+        <form>
+            <label for="name">Enter your name:</label> <br>
+            <input type="text" id="name" placeholder="name"><br><br>
 
-        Enter your address: <br>
-        <textarea></textarea><br><br>
+            <label for="address">Enter your address:</label> <br>
+            <textarea id="address" placeholder="address"></textarea><br><br>
 
-        Enter your phone number: <br>
-        <select>
-            <option>+ ind</option>
-            <option>+ aus</option>
-            <option>+ us</option>
-            <option>+ uk</option>
-        </select>
-        <input type="text" pattern="[0-9]{10}"><br><br>
+            <label for="phone">Enter your phone number:</label> <br>
+            <select>
+                <option value="+ ind" selected>+ ind</option>
+                <option value="+ aus">+ aus</option>
+                <option value="+ us">+ us</option>
+                <option value="+ uk">+ uk</option>
+            </select>
+            <input type="text" id="phone" placeholder="phone-no"><br><br>
 
-        Enter your email: <br>
-        <input type="email"> <br><br>
+            <label for="emailf">Enter your email:</label> <br>
+            <input type="email" id="emailf" placeholder="email"> <br><br>
 
-        Set new password: <br>
-        <input type="password"><br><br>
+            <label for="pass1">Set new password:</label> <br>
+            <input type="password" id="pass1" placeholder="password"><br><br>
 
-        Confirm password: <br>
-        <input type="password"> <br><br>
+            <label for="pass2">Confirm password:</label> <br>
+            <input type="password" id="pass2" placeholder="password"> <br><br>
 
-        <a href="login.html">Already have an account</a><br><br>
+            <a href="login.html">Already have an account</a><br><br>
 
-        <button class="pointer">Submit</button>
-        <input type="reset" class="pointer">
-
-            </form>
+            <button class="pointer" onclick="validate()">Submit</button>
+            <input type="reset" class="pointer">
+        </form>
         </center>
+    </div>
+
+    <script>
+
+
+        function validate(){
+            var pass1 = document.getElementById('pass1').value;
+            var pass2 = document.getElementById('pass2').value;
+
+            if(pass1 == pass2){
+                window.location.href = "login.html";
+            }else{
+                alert("password did not matched try again!");
+            }
+        }
+
+
+
+    </script>
 </body>
 </html>
